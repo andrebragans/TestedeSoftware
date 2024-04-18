@@ -5,27 +5,36 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  build:
-
+  test_and_validate_commits:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: Checkout do repositório
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+        node-version: '14'
+
+    - name: Instalar dependências
+      run: npm install
+
+    - name: Executar Testes
+      run: npm test
+
+    - name: Validar Conventional Commits
+      run: npm run validate-commits  # caso tenha um script para validar os commits
+
+    - name: Geração Automática de Versões
+      run: npm run semantic-release  # caso tenha uma configuração para o semantic-release
+
+    - name: Build do Aplicativo
+      run: npm run build
