@@ -4,8 +4,8 @@
   "description": "UC Gestão e Qualidade de Software",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-     "build": "cp *.js build/"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cp *.js build/"
   },
   "keywords": [],
   "author": "",
