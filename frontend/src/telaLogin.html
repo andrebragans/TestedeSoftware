@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+    />
+    <style>
+      body {
+        font-family: "Sono", sans-serif;
+        margin: 0px;
+        padding: 0px;
+      }
+      input {
+        display: block;
+        width: 400px;
+        height: 50px;
+        border-radius: 20px;
+        background-color: #9ba4b5;
+        border: #212a3e solid 2px;
+      }
+      label {
+        color: #212a3e;
+        font-weight: 600;
+        font-size: 1rem;
+        margin: 15px;
+      }
+      button {
+        margin-top: 80px;
+        font-size: 1rem;
+        width: 300px;
+        height: 40px;
+        border-radius: 20px;
+        margin-bottom: 0px;
+        background-color: #212a3e;
+        color: #ffffff;
+      }
+      .pai {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background-color: #212a3e;
+        justify-content: center;
+        align-items: center;
+      }
+      .mae {
+        border: #212a3e solid 2px;
+        width: 600px;
+        height: 600px;
+        background-color: aliceblue;
+        border-radius: 20px;
+      }
+      .mae2 {
+        border: #212a3e solid 2px;
+        display: flex;
+        width: 600px;
+        height: 600px;
+        background-color: aliceblue;
+        border-radius: 20px;
+        align-items: center;
+        flex-direction: column;
+      }
+      .login {
+        margin: 35px;
+        font-size: 3rem;
+      }
+      #paragrafo {
+        margin: 0px;
+        padding: 0px;
+        font-size: 1rem;
+        color: #212a3e;
+      }
+      img {
+        width: 600px;
+        height: 600px;
+        border-radius: 20px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="div pai">
+      <div class="div mae">
+        <img
+          src="./pexels-vinicius-dattwyler-721533-18920711.jpg"
+          alt="imagem_de_salvador"
+        />
+      </div>
+      <div class="div mae2">
+        <h1 class="login">Login</h1>
+        <label for="">Username<input type="text" /></label>
+        <label for="">Senha<input type="text" /></label>
+        <button>Entrar</button>
+        <p id="paragrafo">
+          não tem conta?<a href="./telaCadastro.html">clique aqui</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
