@@ -1,13 +1,242 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+body {
+  background-color: #212a3e;
+}
+.container {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  grid-template-rows: 1fr 5fr;
+  gap: 1rem;
+  height: 100vh;
+}
+.filhos1 {
+  background-color: #d9d9d9;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 200px 2fr;
+  align-items: center;
+}
+.filhos2 {
+  background-color: #d9d9d9;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filhos3 {
+  display: grid;
+  gap: 15px;
+  background-color: #212a3e;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border-radius: 1rem;
+}
+#img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#title > h1 {
+  font-size: 4rem;
+}
+#img > img {
+  border: 0px;
+  padding: 0px;
+  width: 150px;
+  border-radius: 1rem;
+}
+.img2 {
+  background-color: #212a3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.imgEdit {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+.imgEdit > img {
+  margin-left: 30px;
+  border-radius: 8rem;
+}
+.info {
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.info > p {
+  font-size: 1.5rem;
+  margin-left: 15px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+.info > .infoVeiculo {
+  align-self: center;
+  margin-top: 0px;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.report {
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.report > p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.config {
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub {
+  grid-column-start: -4;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.veiculo {
+  background-color: #d9d9d9;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.veiculo > select {
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  border: #d9d9d9;
+  cursor: pointer;
+}
+
+.passagem {
+  display: flex;
+  background-color: #d9d9d9;
+  border-radius: 1rem;
+  flex-direction: column;
+  gap: 15px;
+}
+.tipoTicket {
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  border: #d9d9d9;
+  cursor: pointer;
+}
+.TipoVeiculosPassagem {
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  border: #d9d9d9;
+  cursor: pointer;
+  align-self: center;
+}
+.preco {
+  align-self: center;
+  justify-self: center;
+  font-size: 4.5rem;
+  color: #37802c;
+}
+.btn {
+  align-self: center;
+  font-size: 2rem;
+  padding: 15px;
+  border-radius: 1rem;
+  background-color: #ffc100;
+  border: black 2px solid;
+  cursor: pointer;
+}
+.report > img {
+  transition: 500ms linear;
+}
+.report > img:hover {
+  transform: scale(1.1);
+}
+.config > img {
+  transition: 500ms linear;
+}
+.config > img:hover {
+  transform: scale(1.1);
+}
+table {
+  align-self: center;
+  justify-self: center;
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
 }

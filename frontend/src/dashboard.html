@@ -3,45 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        background-color: #212a3e;
-      }
-      .container {
-        display: grid;
-        grid-template-columns: 4fr 5fr;
-        grid-template-rows: 1fr 5fr;
-        gap: 1rem;
-        height: 100vh;
-      }
-      .filhos1 {
-        background-color: #d9d9d9;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        border-radius: 1rem;
-      }
-      .filhos2 {
-        background-color: #d9d9d9;
-        border-radius: 1rem;
-      }
-      .filhos3 {
-        background-color: #d9d9d9;
-        border-radius: 1rem;
-      }
-      
-    </style>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="App.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div class="container">
       <div class="filhos1">
         <div id="img">
-          <img src="./prefeituraSalvador.png" alt="" />
+          <img src="./img/prefeituraSalvador.png" alt="" />
         </div>
-        <div id="title"><h1>TranSanvador</h1></div>
+        <div id="title"><h1>TransSalvador</h1></div>
       </div>
-      <div class="filhos2">2</div>
-      <div class="filhos3">3</div>
+      <div class="filhos2">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d15157.485462415869!2d-38.454891776241276!3d-12.97746235268626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x7161b1981abd82f%3A0x4832ac3e4b0465b7!2sUNIFACS%20Campus%20Tancredo%20Neves%20-%20Av.%20Tancredo%20Neves%2C%202131%20-%20Caminho%20das%20%C3%81rvores%2C%20Salvador%20-%20BA%2C%2041820-021!3m2!1d-12.9818591!2d-38.450896!5e0!3m2!1spt-BR!2sbr!4v1718227979475!5m2!1spt-BR!2sbr"
+          width="1100"
+          height="1200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="filhos3">
+        <div class="img2">
+          <div class="imgEdit">
+            <img src="./img/Gilberto.png" alt="imagem de um rapaz" />
+            <h1 style="color: #d9d9d9; margin-bottom: 0px">Edivaldo Pereira</h1>
+          </div>
+        </div>
+        <div class="info">
+          <p class="infoVeiculo">Informações do Veículo</p>
+          <p>Tipo veiculo: Carro</p>
+          <p>Num carteira: 8895615-7</p>
+          <p>Modelo: Fiat Uno</p>
+          <p>Placa: Jk899</p>
+          <p>Ano: 2010</p>
+          <p>Renavam: 859-4</p>
+        </div>
+        <div class="report">
+          <p>Reportar Trânsito</p>
+          <img src="./img/alerta.png" width="240px" alt="Reportar transito" />
+        </div>
+        <div class="config">
+          <img src="./img/icons8-configuração-240.png" alt="configurações" />
+        </div>
+        <div class="sub">
+          <div class="veiculo">
+            <select class="form-select">
+              <option class="Onibus" value="Onibus">Onibus</option>
+              <option class="BRT" value="BRT">Brt</option>
+              <option class="Metro" value="Metro">Metro</option>
+            </select>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Dia</th>
+                  <th scope="col">Horario</th>
+                  <th scope="col">Frequencia(min)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Segunda</th>
+                  <td>07:00 - 19:00</td>
+                  <td>60</td>
+                </tr>
+                <tr>
+                  <th scope="row">Terça</th>
+                  <td>07:00 - 19:00</td>
+                  <td>53</td>
+                </tr>
+                <tr>
+                  <th scope="row">Quarta</th>
+                  <td>07:00 - 19:00</td>
+                  <td>65</td>
+                </tr>
+                <tr>
+                  <th scope="row">Quinta</th>
+                  <td>07:00 - 19:00</td>
+                  <td>65</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sexta</th>
+                  <td>07:00 - 19:00</td>
+                  <td>45</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sabado</th>
+                  <td>07:00 - 19:00</td>
+                  <td>65</td>
+                </tr>
+                <tr>
+                  <th scope="row">Domingo</th>
+                  <td>08:00 - 13:00</td>
+                  <td>35</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="passagem">
+            <select class="tipoTicket">
+              <option><h2>Passagem</h2></option>
+              <option><h2>Estacionamento</h2></option>
+            </select>
+            <select class="TipoVeiculosPassagem">
+              <option><h3>Onibus-BRT</h3></option>
+              <option><h3>Metrô</h3></option>
+            </select>
+            <h1 class="preco">R$ 4.99</h1>
+            <button class="btn">Comprar</button>
+            <div></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="./indexDash.js"></script>
 </html>
